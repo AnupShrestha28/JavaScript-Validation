@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style type="text/css">
+        *{
+            font-family: poppins;
+        }
+
+        #error{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Validation Using Javascript</h1>
+    <form name="myform" onsubmit="return validation()">
+        <label>Username</label><br>
+        <input type="text" name="username" autocomplete="off"> <br> <br>
+
+        <div id="error"></div>
+        <input type="Submit" value="SUBMIT">
+    </form>
+
+    <script>
+        var username=document.forms['myform']['username'];
+        var errors = document.getElementById('error');
+        var letters = /^[a-zA-Z ]*$/;
+        function validation()
+        {
+            if(username.value=='')
+            {
+                alert("Username Must be filled");
+                errors.innerHTML="Username Must be Filled...!!!!";
+                errors.style.display="block";
+                return false;
+            }
+            else if(username.value.length>8)
+            {
+                alert("Username Must be less than 8 characters");
+                error.innerHTML="Username Must be lessthan 8 characters";
+                error.style.display="block";
+                return false;
+            }
+
+            else if(!username.value.match(letters))
+            {
+                alert("Username must contain only alphabets");
+                errors.innerHTML="Username must contain only alphabets";
+                errors.style.display="block";
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

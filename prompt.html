@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prompt</title>
+<style type="text/css">
+body{
+background-color: steelblue;
+color: white;
+font-family: courier;
+text-align: center;
+}
+</style>
+</head>
+<body>
+<p id="demo"></p>
+
+<script type="text/javascript">
+let a =prompt("Enter a number");
+document.getElementById("demo").innerHTML= "entered number : " + a;
+if (a%2===0)
+{
+let sum=0;
+document.write( a + " is even number <br>");
+
+document.write("<br>List of even numbers upto " + a);
+for(i=1;i<=a;i++)
+{
+if(i%2==0){
+sum+=i;
+document.write("<br>" + i);
+}
+}
+document.write("<br><br>sum:"+ sum);
+}
+else{
+let sum=0;
+document.write(a + " is odd number <br>");
+document.write("<br>List of odd numbers upto " + a);
+for(i=1;i<=a;i++)
+{
+if(i%2==1){
+sum+=i;
+document.write("<br>" + i);
+}
+}
+document.write("<br><br>sum:"+ sum);
+}
+
+
+
+</script>
+</body>
+</html>

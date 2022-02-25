@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML_NEW</title>
+    <style type="text/css">
+        *{
+            font-family: poppins;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">MOBILE NUMBER VALIDATION USING JAVASCRIPT</h1>
+    <form  name="myfrm" onsubmit="return validation()">
+        <label>Mobile Number</label><br>
+        <input type="text" name="mobileno" ><br> <br>
+
+        <input type="Submit" value="Submit">
+    </form>
+
+    <script>
+        function validation()
+        {
+            var phone = document.forms['myfrm']['mobileno'];
+            var get_num = String(phone.value).charAt(0);
+            var first_num = Number(get_num);
+
+            if(isNaN(phone.value) || phone.value.length!=10 || first_num<9)
+            {
+                alert('Invalid Phone Number');
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+
+</body>
+</html>

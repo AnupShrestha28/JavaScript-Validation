@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Validation</title>
+</head>
+<body>
+    <p>Display Value Selected in a checkbox</p><br><br>
+    <input type="Checkbox" id="R" name="Hobby" value="Riding">Riding <br>
+    <input type="Checkbox" id="S" name="Hobby" value="Swimming">Swimming <br>
+    <input type="Checkbox" id="C" name="Hobby" value="Coding">Coding <br>
+    <input type="Checkbox" id="D" name="Hobby" value="Dancing">Dancing <br><br>
+
+    <button id="btn">Submit</button>
+
+    <script>
+        const btn = document.querySelector('#btn');
+        btn.addEventListener('click',(event)=>{
+            let checkboxes = document.querySelectorAll('input[name="Hobby"]:checked');
+            let values=[];
+            checkboxes.forEach((checkbox)=>{
+                values.push(checkbox.value);
+
+            });
+            alert(values);
+        });
+    </script>
+</body>
+</html>

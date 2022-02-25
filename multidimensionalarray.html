@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multidimensional Array in Javascript</title>
+    <style type="text/css">
+        body{
+            text-align: center;
+            background-color: gray;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var salary = [
+            ["ABC",24,18000],
+            ["EFG",87,98000],
+            ["IJK",34,89000],
+            ["EFG", 31 ,28000],
+        ];
+        //prints first salary
+        document.write("Original array :<br>");
+        for(var i=0;i<salary.length;i++){
+            document.write(salary[i] +"<br>");
+            
+        }
+
+        //Adding "India" at the 4th Index of 4th index of 4th Sub array
+        salary[3][3] ="India";
+        document.write("<br><br> After adding \"India\" at the 4th array:<br>");
+        for(var i = 0;i<salary.length;i++){
+            document.write(salary[i] + "<br>");
+        }
+
+        document.write("<br><br>After adding \"USA\" and \"Canada\" "+ "at the 3rd array using \"push()\" method :<br>");
+        salary[2].push("USA","Canada");
+
+        //Adding USA and Canada in the 2nd Sub array
+        for(var i =0;i<salary.length;i++){
+            document.write(salary[i]+"<br>");
+        }
+    </script>
+</body>
+</html>

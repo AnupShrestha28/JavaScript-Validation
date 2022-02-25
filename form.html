@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style type="text/css">
+        body{
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+        }
+        form{
+            background-color: grey;
+            border-radius: 20px;
+            align-items: center;
+            margin: auto;
+        }
+        
+
+        
+    </style>
+    <script type="text/javascript">
+        
+        function validateform()
+        {
+            var name = document.myform.name.value;
+            var password = document.myform.pass.value;
+
+            if( name==null || name==""){
+                alert("Name is required");
+                return false;
+            }
+
+            if(password==null || password==""){
+                alert("Password is Required");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name ="myform" method="post" onsubmit="return validateform()">
+    Full Name:<input type="text" name="name" placeholder="Enter Your FullName" style="font-size: 20px;"><br><br>
+    Password:<input type="password" name="pass" placeholder="Enter Your Password" style="font-size: 20px;"><br><br>
+    <input type="Submit" value="Login" style="font-size: 20px;" >
+</form>
+</body>
+</html>
